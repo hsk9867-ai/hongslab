@@ -63,7 +63,8 @@ const PORTFOLIO=[
  ['https://nbh0000.github.io/shuttledraw/app/','셔틀드로우 웹앱','선수 명단 입력 · 배드민턴 대진표 자동 생성 · 라운드별 진출 관리'],
  ['https://nbh0000.github.io/daehyun-industry-web/','(주)대현산업 홈페이지','회사 소개 · 시공 사례 · 공정 안내 · 오시는 길'],
  ['https://nbh0000.github.io/phoneshop-web/','폰다이렉트 홈페이지','기종별 실구매가 조회 · 번호이동·기기변경 · 카카오 인증 신청'],
- ['https://nbh0000.github.io/renderfit-preview/','렌더핏 웹앱','사진·도면 업로드 · 스타일 시안 생성 · 포토리얼 렌더 확인']
+ ['https://nbh0000.github.io/renderfit-preview/','렌더핏 웹앱','사진·도면 업로드 · 스타일 시안 생성 · 포토리얼 렌더 확인'],
+ ['https://gunaminc.kr/','(주)구단종합인력 홈페이지','업종별 인력 소개 · 서비스 안내 · 전화 문의 연결']
 ];
 const shot=(url,w)=>`https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=${w}`;
 document.getElementById('portfolioGrid').innerHTML=PORTFOLIO.map(p=>`<article class="example"><div class="ex-shot"><img loading="lazy" src="${shot(p[0],900)}" data-full="${shot(p[0],1600)}" alt="${p[1]} 미리보기"></div><div class="ex-body"><strong>${p[1]}</strong><p>${p[2]}</p><div class="ex-actions"><button type="button" class="btn ex-preview" data-url="${p[0]}">크게 보기</button><a class="btn ex-visit" href="${p[0]}" target="_blank" rel="noopener">사이트 방문 →</a></div></div></article>`).join('');
