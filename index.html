@@ -1,97 +1,590 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="홍스랩 | 맞춤형 앱,웹제작 스튜디오" />
-  <meta property="og:title" content="홍스랩 | 맞춤형 앱,웹제작 스튜디오" />
-  <meta property="og:description" content="사업에 꼭 맞는 앱과 홈페이지를 제작해 드립니다." />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="홍스랩 | 사업에 꼭 맞는 앱과 홈페이지를 제작하는 맞춤형 웹·앱 제작 스튜디오. 무료 상담 후 3영업일부터 제작." />
+  <meta property="og:title" content="홍스랩 | 맞춤형 앱·웹제작 스튜디오" />
+  <meta property="og:description" content="사업에 꼭 맞는 앱과 홈페이지를 제작해 드립니다. 무료 상담 먼저 받아보세요." />
+  <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>홍스랩 | 맞춤형 앱,웹제작 스튜디오</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>홍스랩 | 맞춤형 앱·웹제작 스튜디오</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <style>
-    :root{--bg:#04030c;--bg-alt:#0a0818;--panel:#120f22;--panel-2:#1c1730;--border:#2a2440;--ink:#f5f3fb;--muted:#a9a6ba;--gold:#e2bb6d;--gold-deep:#c9973e;--red:#ff6b6b;--mono:"JetBrains Mono",ui-monospace,"SF Mono",monospace;--max:1180px;scroll-behavior:smooth}
-    *{box-sizing:border-box} body{margin:0;color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;line-height:1.65;background-color:var(--bg);background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:26px 26px} a{text-decoration:none;color:inherit} button,input,select,textarea{font:inherit} button{cursor:pointer} .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.section{padding:96px 0}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.06em;font-size:.85rem}.title{font-size:clamp(1.9rem,3.4vw,3rem);letter-spacing:-.05em;line-height:1.28;margin:9px 0 14px;color:var(--ink)}.lead{color:var(--muted);max-width:710px;margin:0}.notice{font-size:.88rem;color:var(--muted)}.required{color:var(--red)}
-    body:before{content:"";position:fixed;top:74px;left:0;right:0;height:1px;z-index:29;background:linear-gradient(90deg,transparent,rgba(226,187,109,.6),transparent);background-size:50% 100%;background-repeat:no-repeat;animation:scanline 6s linear infinite;pointer-events:none}
-    @keyframes scanline{0%{background-position:-50% 0}100%{background-position:150% 0}}
-    header{height:74px;display:flex;align-items:center;position:fixed;z-index:30;top:0;left:0;right:0;background:rgba(4,3,12,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:inline-flex;align-items:center;gap:.2em;font-size:1.25rem;letter-spacing:-.03em;line-height:1}.logo .lg-bold,.logo .lg-light{opacity:1;filter:none;transform:none;animation:none}.logo .lg-dot{opacity:1;transform:scale(1);animation:none;box-shadow:0 0 8px rgba(226,187,109,.6)}.lab-status{width:7px;height:7px;border-radius:50%;background:var(--gold);margin-left:10px;flex:none;animation:statusPulse 2.2s infinite}@keyframes statusPulse{0%{box-shadow:0 0 0 0 rgba(226,187,109,.55)}70%{box-shadow:0 0 0 8px rgba(226,187,109,0)}100%{box-shadow:0 0 0 0 rgba(226,187,109,0)}}.links{display:flex;gap:19px;font-size:.84rem;font-weight:600;color:var(--muted)}.links a:hover{color:var(--gold)}.menu-btn{display:none;border:0;background:none;font-size:1.45rem;color:var(--ink)}
-    .hero{margin-top:74px;min-height:680px;display:flex;align-items:center;position:relative;overflow:hidden;color:#fff;background:var(--bg)}.hero:before{content:"";position:absolute;inset:-6%;background-image:linear-gradient(90deg,rgba(3,3,12,.62),rgba(4,6,20,.38)),url('hero-bg.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;animation:drift 46s ease-in-out infinite;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%)}.hero:after{content:"";position:absolute;width:600px;height:600px;border-radius:50%;right:-260px;bottom:-280px;background:rgba(120,143,255,.14);filter:blur(2px)}@keyframes drift{0%{transform:scale(1.03) translate(0,0)}50%{transform:scale(1.06) translate(-1%,-.6%)}100%{transform:scale(1.03) translate(0,0)}}.hero .wrap{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center}.hero p{font-size:clamp(1rem,1.7vw,1.2rem);max-width:650px;color:#e6edf8;margin:0;animation:up .7s .25s both}.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;border:1.5px solid rgba(226,187,109,.6);border-radius:999px;background:rgba(226,187,109,.14);backdrop-filter:blur(4px);color:#fff;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:800;letter-spacing:.02em;box-shadow:0 0 30px rgba(226,187,109,.25);animation:up .7s both}.hero .eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(226,187,109,.9);animation:statusPulse 2.2s infinite}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;animation:up .7s .4s both}@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-    .hero-logo-wrap{position:relative;display:inline-block;margin:20px 0 26px}.hero-logo-wrap:before{content:"";position:absolute;inset:-50px;background:radial-gradient(circle,rgba(226,187,109,.28),transparent 70%);filter:blur(30px);z-index:0;animation:glowPulse 4s ease-in-out infinite}.hero-logo{position:relative;z-index:1;display:inline-flex;align-items:baseline;gap:.32em;font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.04em;line-height:1}.lg-bold{display:inline-block;font-weight:800;color:#fff;opacity:0;filter:blur(8px);transform:translateY(18px);animation:revealUp 1s cubic-bezier(.16,1,.3,1) .1s forwards}.lg-light{display:inline-block;font-weight:400;color:#fff;opacity:0;filter:blur(8px);transform:translateY(18px);animation:revealUp 1s cubic-bezier(.16,1,.3,1) .3s forwards}
-    @keyframes revealUp{to{opacity:1;filter:blur(0);transform:translateY(0)}}
-    .lg-dot{position:relative;display:inline-block;width:.2em;height:.2em;border-radius:50%;background:var(--gold);transform-origin:center;opacity:0;transform:scale(.2);animation:dotBloom .7s cubic-bezier(.16,1,.3,1) .75s forwards,dotPulse 2.6s ease-in-out 1.5s infinite}
-    @keyframes dotBloom{0%{opacity:0;transform:scale(.2);box-shadow:0 0 0 rgba(226,187,109,0)}55%{opacity:1;transform:scale(1.4);box-shadow:0 0 22px rgba(226,187,109,.9)}100%{opacity:1;transform:scale(1);box-shadow:0 0 10px rgba(226,187,109,.6)}}
-    @keyframes dotPulse{0%,100%{box-shadow:0 0 10px rgba(226,187,109,.55)}50%{box-shadow:0 0 18px rgba(226,187,109,.85)}}
-    @keyframes glowPulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:.95;transform:scale(1.08)}}.btn{display:inline-flex;align-items:center;justify-content:center;border:1.5px solid transparent;border-radius:10px;padding:15px 24px;font-weight:800;font-size:1rem;letter-spacing:-.01em;transition:.2s}.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#1c1408;box-shadow:0 10px 28px -8px rgba(226,187,109,.55)}.btn.primary:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 14px 34px -8px rgba(226,187,109,.7)}.btn.light{background:#fff;color:#14101f;box-shadow:0 10px 26px -10px rgba(0,0,0,.5)}.btn.light:hover{background:#f2f2f2;transform:translateY(-2px)}.btn.outline{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.06);color:#fff}.btn.outline:hover{background:rgba(255,255,255,.14);border-color:#fff;transform:translateY(-2px)}.btn.glow{background:rgba(226,187,109,.1);border:1.5px solid var(--gold);color:#fff;box-shadow:0 0 0 1px rgba(226,187,109,.2),0 0 30px rgba(226,187,109,.32)}.btn.glow:hover{background:rgba(226,187,109,.18);box-shadow:0 0 0 1px rgba(226,187,109,.4),0 0 40px rgba(226,187,109,.5);transform:translateY(-2px)}
-    .pricing{background:var(--bg-alt)}.portfolio-dark .eyebrow,.pricing .eyebrow,#process .eyebrow,#contact .eyebrow{display:inline-flex;align-items:center;gap:8px}.portfolio-dark .eyebrow:before,.pricing .eyebrow:before,#process .eyebrow:before,#contact .eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(226,187,109,.8);animation:statusPulse 2.2s infinite}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.plan{border:1px solid var(--border);border-radius:18px;padding:30px 26px;background:var(--panel);position:relative;display:flex;flex-direction:column}.plan.recommended{border:2px solid var(--gold);box-shadow:0 14px 40px rgba(226,187,109,.15)}.badge{position:absolute;top:-14px;left:22px;background:var(--gold);color:#1c1408;border-radius:99px;padding:4px 11px;font-size:.74rem;font-weight:800;letter-spacing:.02em}.discount{display:inline-block;background:rgba(255,107,107,.14);color:#ff9a9a;padding:3px 8px;border-radius:6px;font-size:.78rem;font-weight:800}.plan h3{font-size:1.35rem;margin:12px 0 2px;letter-spacing:-.04em;color:var(--ink)}.plan .for{margin:0;color:var(--muted);font-size:.86rem}.old{text-decoration:line-through;color:#6f6b82;font-size:.9rem;margin:22px 0 0}.price{font-size:2rem;font-weight:800;letter-spacing:-.04em;color:var(--ink);margin:0}.period{font-size:.87rem;color:var(--gold);font-weight:700;margin:4px 0 18px}.plan ul{margin:0;padding:16px 0 8px;border-top:1px solid var(--border);list-style:none;font-size:.89rem;color:var(--muted)}.plan li{padding:6px 0}.plan li:before{content:'✓';color:var(--gold);font-weight:800;margin-right:8px}.plan .btn{margin-top:auto}.common{margin-top:26px;padding:24px;background:var(--panel);border:1px solid var(--border);border-radius:14px;color:var(--muted);font-size:.88rem}.common strong{color:var(--ink)}.common ul{margin:10px 0 0;padding-left:18px}.common li{margin:5px 0}
-    .plan,.example,.info{position:relative}.plan:before,.example:before,.info:before{content:"";position:absolute;top:8px;left:8px;width:13px;height:13px;border-top:1.5px solid rgba(226,187,109,.4);border-left:1.5px solid rgba(226,187,109,.4);transition:.25s;pointer-events:none;z-index:2}.plan:after,.example:after,.info:after{content:"";position:absolute;bottom:8px;right:8px;width:13px;height:13px;border-bottom:1.5px solid rgba(226,187,109,.4);border-right:1.5px solid rgba(226,187,109,.4);transition:.25s;pointer-events:none;z-index:2}.plan:hover:before,.plan:hover:after,.example:hover:before,.example:hover:after,.info:hover:before,.info:hover:after{border-color:var(--gold)}
-    .portfolio-dark{background:var(--bg);position:relative;overflow:hidden}.portfolio-dark:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(226,187,109,.2);filter:blur(100px);top:-180px;left:-140px}.portfolio-dark:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(108,140,255,.18);filter:blur(100px);bottom:-180px;right:-140px}.portfolio-dark .wrap{position:relative;z-index:1}
-    .examples{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}.example{border-radius:18px;overflow:hidden;background:var(--panel);border:1px solid var(--border);display:flex;flex-direction:column}.ex-shot{aspect-ratio:4/3;overflow:hidden;background:var(--panel-2)}.ex-shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s}.example:hover .ex-shot img{transform:scale(1.045)}.ex-body{padding:22px}.ex-body strong{display:block;color:var(--ink);font-size:1.08rem;letter-spacing:-.03em}.ex-body p{margin:8px 0 18px;color:var(--muted);font-size:.86rem}.ex-actions{display:flex;gap:10px}.ex-actions .btn{flex:1;padding:12px 10px;font-size:.85rem;border-radius:9px;border:0}.ex-preview{background:rgba(255,255,255,.07);color:#fff;border:1.5px solid rgba(255,255,255,.4)!important;font-weight:700}.ex-preview:hover{background:rgba(255,255,255,.14)}.ex-visit{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#1c1408;font-weight:800;box-shadow:0 8px 20px -8px rgba(226,187,109,.6)}.ex-visit:hover{filter:brightness(1.12)}
-    .ex-modal{position:fixed;inset:0;background:rgba(2,2,8,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:30px}.ex-modal.open{display:flex}.ex-modal-inner{max-width:min(1100px,92vw);width:100%;text-align:center}.ex-modal img{max-width:100%;max-height:72vh;border-radius:14px;border:1px solid var(--border);background:var(--panel)}.ex-modal-close{position:absolute;top:22px;right:26px;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer;line-height:1}.ex-modal .btn{margin-top:20px;display:inline-flex;padding:13px 26px;border-radius:9px}
-    @media(max-width:580px){.ex-actions{flex-direction:column}}
-    #process{background:var(--bg-alt)}#process .title{font-weight:900;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em}.process{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:35px}.step{border-top:3px solid var(--gold);padding:15px 10px 0;position:relative}.step:before{content:"";position:absolute;top:-3px;left:0;width:6px;height:3px;background:var(--gold);box-shadow:0 0 8px rgba(226,187,109,.7)}.step b{font-size:.78rem;color:var(--gold);font-family:var(--mono)}.step p{font-size:.9rem;font-weight:700;margin:5px 0 0;letter-spacing:-.03em;color:var(--ink)}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}.info{background:var(--panel);border:1px solid var(--border);padding:25px;border-radius:14px}.info h3{margin:0 0 10px;color:var(--ink)}.info p,.info ul{font-size:.9rem;color:var(--muted);margin:0}.info ul{padding-left:18px}
-    #contact{background:var(--bg-alt)}.contact-cards{margin:35px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.c-card{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--panel);border:1px solid var(--border);border-radius:14px;transition:.2s}.c-card:hover{border-color:var(--gold);transform:translateY(-2px)}.c-icon{flex:none;width:38px;height:38px;border-radius:50%;background:var(--panel-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--gold);font-size:1rem}.c-icon.kakao{background:#FEE500;color:#391B1B;border-color:#FEE500}.c-text{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}.c-text b{color:var(--ink);font-size:.95rem;letter-spacing:-.02em}.c-text small{color:var(--muted);font-size:.82rem}.c-arrow{color:var(--gold);font-weight:800;font-size:1.1rem}
-    .contact-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;margin-top:24px}
-    .contact-side{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
-    .contact-side h3{margin:0;color:var(--ink)}
-    .contact-side p{margin:0;color:var(--muted);font-size:.91rem}
-    .btn.kakao-btn{background:#FEE500;color:#391B1B;width:100%}.btn.kakao-btn:hover{filter:brightness(.95);transform:translateY(-2px)}
-    .side-row{display:flex;gap:10px}.side-row .btn{flex:1}
-    .side-info{color:var(--muted);font-size:.88rem;line-height:1.8;margin-top:4px}
-    .form{border:1px solid var(--border);background:var(--panel);padding:28px;border-radius:16px}
-    .form h3{margin:0 0 8px;color:var(--ink)}
-    .form-note{margin:0 0 20px;color:var(--muted);font-size:.87rem}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form .field.full{grid-column:1/-1}.field{margin-bottom:17px}.field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:7px}.field select,.field input[type=text],.field textarea{width:100%;border:1px solid var(--border);border-radius:8px;padding:11px 12px;background:var(--panel-2);color:var(--ink)}.field select option{color:#000}.field ::placeholder{color:#6f6b82}.privacy{font-size:.86rem;color:var(--muted);display:flex;gap:8px;align-items:flex-start}.form-actions{display:flex;gap:10px;margin-top:18px}.form-actions .btn{flex:1}.result{margin-top:14px;color:var(--gold);font-size:.88rem;min-height:1.4em}
-    footer{background:var(--bg-alt);color:var(--muted);padding:45px 0 95px;font-size:.86rem;border-top:1px solid var(--border)}.foot-logo{display:inline-flex;align-items:baseline;gap:.22em;font-size:1.4rem;letter-spacing:-.03em;margin-bottom:16px;line-height:1}.biz{display:grid;grid-template-columns:repeat(2,max-content);gap:5px 24px}.input-needed{color:var(--gold)}.mobile-bar{display:none}
-    .kakao-float{position:fixed;right:22px;bottom:22px;z-index:40;width:56px;height:56px;border-radius:50%;background:#FEE500;color:#391B1B;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.45);transition:.2s}.kakao-float:hover{transform:translateY(-3px) scale(1.06)}.kakao-float svg{width:26px;height:26px}
-    .phone-float{position:fixed;right:22px;bottom:92px;z-index:40;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#1c1408;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.45);transition:.2s}.phone-float:hover{transform:translateY(-3px) scale(1.06)}.phone-float svg{width:24px;height:24px}
-    @media(max-width:900px){.links{display:none}.menu-btn{display:block}.links.open{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--bg);padding:10px 20px 18px;border-bottom:1px solid var(--border);gap:2px}.links.open a{padding:12px 4px;border-bottom:1px solid var(--border)}.links.open a:last-child{border-bottom:0}.plans,.examples{grid-template-columns:1fr}.contact-split{grid-template-columns:1fr}.contact-cards{grid-template-columns:1fr}.plans{max-width:540px;margin-left:auto;margin-right:auto}.process{grid-template-columns:repeat(4,1fr)}.hero{min-height:610px}.section{padding:72px 0}}
-    @media(max-width:580px){.wrap{width:min(100% - 32px,var(--max))}.hero-actions{flex-direction:column;align-items:stretch}.section{padding:60px 0}.process{grid-template-columns:repeat(2,1fr);gap:18px}.info-grid,.form-grid{grid-template-columns:1fr}.form .field.full{grid-column:auto}.form-actions{flex-direction:column}.side-row{flex-direction:column}.mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;z-index:35;bottom:0;left:0;right:0;padding:10px 12px;background:rgba(4,3,12,.92);backdrop-filter:blur(10px);border-top:1px solid var(--border);gap:9px}.mobile-bar .btn{padding:12px 8px;font-size:.9rem}footer{padding-bottom:90px}.biz{grid-template-columns:1fr}.kakao-float{bottom:90px;right:16px;width:50px;height:50px}.kakao-float svg{width:23px;height:23px}.phone-float{bottom:152px;right:16px;width:50px;height:50px}.phone-float svg{width:21px;height:21px}}
+    /* ===== Theme tokens (waver 구조 참고, 홍스랩 골드 포인트) ===== */
+    :root{
+      --bg:#000;--bg-2:#060407;--bg-3:#121212;
+      --heading:#fff;--text:#bbb;--text-dim:#8d8d8d;
+      --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.15);
+      --gold:#e2bb6d;--gold-deep:#c9973e;
+      --kakao:#FEE500;--kakao-ink:#391B1B;
+      --header-h:80px;--inner:1280px;--t:.3s;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scrollbar-gutter:stable}
+    body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans KR',system-ui,sans-serif;letter-spacing:-.05em;word-break:keep-all;-webkit-font-smoothing:antialiased;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    ul,ol{list-style:none}
+    button,input,select,textarea{font:inherit;color:inherit}
+    button{border:0;background:none;cursor:pointer}
+    img,video{display:block;max-width:100%}
+    .inner{width:var(--inner);max-width:94%;margin:0 auto;position:relative}
+    .section{position:relative}
+
+    /* ===== 공통 타이틀 ===== */
+    .m_txt h2{font-size:54px;color:var(--heading);line-height:1.3em;font-weight:700}
+    .m_txt h3{font-size:24px;font-weight:600;color:var(--heading);margin-bottom:25px}
+    .m_txt p{font-size:19px;font-weight:500;color:var(--text);line-height:1.6em}
+    .m_txt .tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--gold);margin-bottom:18px;text-transform:uppercase}
+    .m_txt .tag:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(226,187,109,.8)}
+    .m_txt.flex{display:flex;align-items:flex-end;gap:50px;justify-content:space-between}
+    .m_txt.center{text-align:center}
+    .m_txt.center .tag{justify-content:center}
+
+    /* ===== 버튼 (알약형) ===== */
+    .btn_box{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    .btn_box>a,.btn_box>button{line-height:48px;border-radius:40px;font-weight:700;font-size:16px;display:inline-flex;align-items:center;transition:transform .2s,background var(--t),color var(--t)}
+    .btn_box>a:hover,.btn_box>button:hover{transform:translateY(-2px)}
+    .btn1{background:rgba(255,255,255,.1);color:#fff;padding:0 30px;border:1.5px solid rgba(255,255,255,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.btn1:hover{background:rgba(255,255,255,.2);border-color:#fff}
+    .btn2{background:#fff;color:#000;padding:0 25px}
+    .btn2.free{padding:0 25px 0 14px;gap:6px}
+    .btn2 span{background:#000;color:#fff;font-size:15px;font-weight:700;padding:0 8px;border-radius:30px;display:inline-block;line-height:30px}
+    .btn2.gold span{background:var(--gold-deep);color:#1c1408}
+    .btn_kakao{background:var(--kakao);color:var(--kakao-ink);padding:0 28px}
+
+    /* ===== 로고 (텍스트형) ===== */
+    .logo{display:inline-flex;align-items:baseline;gap:.22em;color:#fff;letter-spacing:-.04em;line-height:1}
+    .logo b{font-weight:800}.logo i{font-style:normal;font-weight:300}
+    .logo .dot{width:.22em;height:.22em;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(226,187,109,.6);align-self:flex-end;margin-bottom:.06em}
+
+    /* ===== Header ===== */
+    #header{height:var(--header-h);position:fixed;top:0;left:0;width:100%;z-index:999;background:transparent;transition:background var(--t),backdrop-filter var(--t)}
+    #header.on{background:rgba(0,0,0,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    #header .inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+    #header .logo{font-size:26px}
+    #header .gnb{display:flex;gap:45px;justify-content:center;align-items:center;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+    #header .gnb a{color:var(--heading);font-size:16px;font-weight:600;line-height:50px;opacity:.85;transition:opacity var(--t)}
+    #header .gnb a:hover{opacity:1}
+    #header .h_btn{display:flex;align-items:center;gap:15px}
+    #header .h_btn .cta{background:#fff;color:#000;font-size:15px;font-weight:700;padding:6px 15px 6px 10px;border-radius:30px;display:flex;gap:6px;align-items:center;transition:transform .2s}
+    #header .h_btn .cta:hover{transform:translateY(-2px)}
+    #header .h_btn .cta span{background:#000;color:#fff;font-size:13.5px;font-weight:700;padding:4px 7px;border-radius:30px;display:inline-block;line-height:1.2}
+    .menuToggle{display:none;position:relative;z-index:1001;width:22px;height:14px;flex-direction:column;justify-content:space-between}
+    .menuToggle span{display:block;width:100%;height:1.5px;background:var(--heading);transition:transform var(--t),opacity var(--t)}
+    .menuToggle.on span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .menuToggle.on span:nth-child(2){opacity:0}
+    .menuToggle.on span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .mo_bg{display:none}.m_gnb{display:none}
+
+    /* ===== Hero ===== */
+    #hero{height:100dvh;min-height:640px;overflow:hidden;position:relative}
+    #hero .visual{position:absolute;inset:0}
+    #hero .visual .img{position:absolute;inset:-4%;background:url('hero-bg.jpg') center/cover no-repeat;opacity:.55;animation:drift 50s ease-in-out infinite}
+    @keyframes drift{0%,100%{transform:scale(1.02) translate(0,0)}50%{transform:scale(1.06) translate(-1%,-.8%)}}
+    #hero .visual .bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 45%,var(--bg) 100%);z-index:2}
+    #hero .txt_wrap{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:3;padding:var(--header-h) 20px 0}
+    #hero .txt_wrap>*{max-width:100%}
+    #hero .icon{display:inline-block;padding:1.5px;border-radius:18px;margin-bottom:30px;opacity:0;transform:translateY(20px) rotateX(15deg) rotateY(-15deg);transition:transform 1.2s cubic-bezier(.25,1,.5,1),opacity 1.2s ease,background 1.5s ease,box-shadow 1.5s ease;background:linear-gradient(135deg,rgba(252,247,232,0),rgba(252,247,232,0))}
+    #hero .icon .box{width:80px;height:80px;border-radius:16px;background:#0b0b0d;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.08)}
+    #hero .icon .box .dot{width:22px;height:22px;border-radius:50%;background:var(--gold);box-shadow:0 0 22px rgba(226,187,109,.85);animation:dotPulse 2.6s ease-in-out infinite}
+    @keyframes dotPulse{0%,100%{box-shadow:0 0 12px rgba(226,187,109,.55)}50%{box-shadow:0 0 26px rgba(226,187,109,.95)}}
+    #hero .icon.in{opacity:1;transform:translateY(0) rotate(7deg);background:linear-gradient(135deg,rgba(252,247,232,.8) 0%,rgba(252,247,232,.05) 40%,rgba(252,247,232,.05) 60%,rgba(252,247,232,.8) 100%);box-shadow:0 15px 35px rgba(252,247,232,.12),0 0 30px rgba(226,187,109,.15)}
+    #hero h2{max-width:900px;color:var(--heading);font-size:64px;line-height:1.25;margin-bottom:20px;font-weight:800;letter-spacing:-.05em}
+    #hero h2 .logo{font-size:1em;vertical-align:baseline}
+    #hero p{font-size:22px;font-weight:500;color:var(--text);line-height:1.6em}
+    #hero .btn_box{margin-top:50px}
+    #hero .counter{display:flex;justify-content:center;gap:100px;margin-top:100px}
+    #hero .counter li p{font-size:16px;color:var(--text)}
+    #hero .counter li .num{display:flex;justify-content:center;align-items:flex-end;margin-top:7px}
+    #hero .counter li .num .count{font-size:48px;color:var(--heading);font-weight:700;line-height:1em}
+    #hero .counter li .num .count+span{color:var(--heading);font-size:24px;font-weight:700;margin-left:5px;line-height:1.1}
+    .rise{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+    .rise.in{opacity:1;transform:none}
+    #hero .scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:4;color:var(--text-dim);font-size:12px;letter-spacing:.2em;display:flex;flex-direction:column;align-items:center;gap:8px}
+    #hero .scroll:after{content:"";width:1px;height:38px;background:linear-gradient(to bottom,var(--text-dim),transparent);animation:scrollLine 1.8s ease-in-out infinite}
+    @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+    /* ===== sec1: 제작 과정 (스티키) ===== */
+    #sec1{padding:140px 0}
+    #sec1 .inner{display:flex;gap:80px;align-items:flex-start}
+    #sec1 .l_cont{position:sticky;top:140px;width:36%}
+    #sec1 .l_cont .m_txt p{margin-top:25px}
+    #sec1 .l_cont .btn_box{justify-content:flex-start;margin-top:40px}
+    #sec1 .r_cont{width:64%}
+    #sec1 .step_wrap li{position:relative;padding:34px 0;border-top:1px solid var(--border);display:grid;grid-template-columns:110px 1fr;gap:20px;align-items:start;transition:opacity var(--t)}
+    #sec1 .step_wrap li:last-child{border-bottom:1px solid var(--border)}
+    #sec1 .step_wrap li .step{font-size:15px;font-weight:700;background:var(--heading);color:var(--bg);border-radius:5px;padding:4px 12px;white-space:nowrap;display:inline-block;justify-self:start;opacity:.35;transition:opacity var(--t),background var(--t)}
+    #sec1 .step_wrap li h3{font-size:26px;font-weight:600;color:var(--heading);opacity:.45;transition:opacity var(--t)}
+    #sec1 .step_wrap li p{color:var(--text);font-size:18px;font-weight:500;line-height:1.6em;padding-top:12px;opacity:.45;transition:opacity var(--t)}
+    #sec1 .step_wrap li.on .step{opacity:1;background:var(--gold);color:#1c1408}
+    #sec1 .step_wrap li.on h3,#sec1 .step_wrap li.on p{opacity:1}
+
+    /* ===== sec2: 제작사례 마퀴 ===== */
+    #sec2{padding:140px 0;background:var(--bg);overflow:hidden}
+    #sec2 .m_txt{margin-bottom:80px}
+    #sec2 .design_wrap{width:100%;overflow:hidden;display:flex;flex-direction:column;gap:12px;position:relative}
+    #sec2 .design_wrap .bg{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,transparent 45%,var(--bg) 100%);pointer-events:none}
+    #sec2 .design_wrap .box{display:flex;gap:12px;width:max-content;will-change:transform;animation:rollLeft 60s linear infinite}
+    #sec2 .design_wrap .box.rev{animation-direction:reverse;animation-duration:75s}
+    #sec2 .design_wrap .box li{flex-shrink:0;width:390px;height:260px;border-radius:10px;overflow:hidden;background:var(--bg-3);border:1px solid var(--border)}
+    #sec2 .design_wrap .box li img{width:100%;height:100%;object-fit:cover;object-position:top}
+    @keyframes rollLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    #sec2 .btn_box{margin-top:60px}
+
+    /* ===== pricing ===== */
+    #pricing{padding:140px 0}
+    #pricing .m_txt{margin-bottom:60px}
+    #pricing .m_txt p{margin-top:20px;max-width:760px}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .plan{border:1px solid var(--border2);border-radius:18px;padding:40px 32px;background:var(--bg);position:relative;display:flex;flex-direction:column;transition:border-color var(--t),transform .25s}
+    .plan:hover{border-color:rgba(255,255,255,.35);transform:translateY(-4px)}
+    .plan.recommended{border-color:var(--gold);box-shadow:0 20px 60px -30px rgba(226,187,109,.45)}
+    .plan .badge{position:absolute;top:-14px;left:28px;background:var(--gold);color:#1c1408;border-radius:99px;padding:4px 12px;font-size:13px;font-weight:800}
+    .plan .discount{display:inline-block;align-self:flex-start;border:1px solid var(--border2);color:var(--heading);padding:3px 10px;border-radius:30px;font-size:13px;font-weight:700}
+    .plan h3{font-size:28px;margin:18px 0 4px;color:var(--heading);font-weight:700}
+    .plan .for{color:var(--text);font-size:15px}
+    .plan .old{text-decoration:line-through;color:var(--text-dim);font-size:15px;margin-top:28px}
+    .plan .price{font-size:40px;font-weight:800;color:var(--heading);line-height:1.1;letter-spacing:-.04em}
+    .plan .period{font-size:14px;color:var(--gold);font-weight:700;margin:8px 0 24px}
+    .plan ul{padding:22px 0 10px;border-top:1px solid var(--border);font-size:15px;color:var(--text);flex:1}
+    .plan li{padding:6px 0;display:flex;gap:10px;align-items:flex-start}
+    .plan li:before{content:"✓";color:var(--gold);font-weight:800;flex:none}
+    .plan .notice{font-size:13px;color:var(--text-dim);margin-bottom:12px}
+    .plan .btn_box{margin-top:auto}
+    .plan .btn_box>a{width:100%;justify-content:center}
+    .plan .btn_line{background:transparent;color:#fff;border:1px solid var(--border2);padding:0 25px}
+    .plan .btn_line:hover{background:rgba(255,255,255,.08)}
+    .common{margin-top:40px;padding:30px 34px;border:1px solid var(--border);border-radius:14px;color:var(--text);font-size:15px;background:var(--bg-3)}
+    .common strong{color:var(--heading);display:block;margin-bottom:10px;font-size:16px}
+    .common li{padding:4px 0 4px 16px;position:relative;line-height:1.7}
+    .common li:before{content:"";position:absolute;left:0;top:14px;width:5px;height:1px;background:var(--text-dim)}
+
+    /* ===== sec6: 실제 제작사례 슬라이더 ===== */
+    #sec6{padding:60px 0 140px;overflow-x:hidden}
+    #sec6 .top{margin-bottom:70px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
+    #sec6 .arrow_wrap{display:flex;align-items:center;gap:14px}
+    #sec6 .arrow{width:56px;aspect-ratio:1/1;border:1px solid var(--border2);border-radius:50%;display:inline-flex;justify-content:center;align-items:center;cursor:pointer;color:var(--heading);font-size:20px;transition:background var(--t),border-color var(--t)}
+    #sec6 .arrow:hover{background:#fff;color:#000;border-color:#fff}
+    #sec6 .cont{position:relative}
+    #sec6 .track{display:flex;gap:30px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 0 10px}
+    #sec6 .track::-webkit-scrollbar{display:none}
+    #sec6 .slide-item{flex:0 0 398px;scroll-snap-align:start}
+    #sec6 .slide-item .img{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:var(--bg-3);border:1px solid var(--border);position:relative}
+    #sec6 .slide-item .img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s}
+    #sec6 .slide-item:hover .img img{transform:scale(1.04)}
+    #sec6 .slide-item .img .zoom{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;transition:opacity var(--t)}
+    #sec6 .slide-item:hover .img .zoom{opacity:1}
+    #sec6 .slide-item p.name{font-size:20px;font-weight:700;color:var(--heading);margin-top:20px}
+    #sec6 .slide-item p.desc{font-size:14px;color:var(--text);margin-top:6px;line-height:1.6}
+    #sec6 .slide-item a.visit{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:14px;font-weight:700;color:var(--heading);border-bottom:1px solid var(--border2);padding-bottom:2px;transition:border-color var(--t)}
+    #sec6 .slide-item a.visit:hover{border-color:#fff}
+
+    /* ===== 이미지 모달 ===== */
+    .ex-modal{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:1200;padding:30px}
+    .ex-modal.open{display:flex}
+    .ex-modal-inner{max-width:min(1100px,92vw);width:100%;text-align:center}
+    .ex-modal img{max-width:100%;max-height:72vh;border-radius:12px;border:1px solid var(--border2);margin:0 auto}
+    .ex-modal-close{position:absolute;top:22px;right:26px;color:#fff;font-size:28px;line-height:1}
+    .ex-modal .btn_box{margin-top:22px}
+
+    /* ===== sec7: 클로징 CTA ===== */
+    #sec7{background:var(--bg-2);padding:140px 0 0;overflow:hidden;position:relative}
+    #sec7 .m_txt{text-align:center;position:relative;z-index:3}
+    #sec7 .m_txt h2{color:#fff}
+    #sec7 .m_txt .btn_box{margin-top:60px}
+    #sec7 .visual{position:relative;height:420px;margin-top:-60px}
+    #sec7 .visual .img{position:absolute;inset:0;background:url('hero-bg.jpg') center 30%/cover no-repeat;opacity:.45;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 45%,#000 70%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 45%,#000 70%,transparent 100%)}
+
+    /* ===== 상담 카드 (sec7 하단) ===== */
+    #contact{padding:0 0 140px;background:var(--bg-2)}
+    .contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .c-card{display:flex;align-items:center;gap:16px;padding:22px 24px;background:#111;border:1px solid var(--border);border-radius:16px;transition:transform .25s,border-color var(--t)}
+    .c-card:hover{border-color:rgba(255,255,255,.3);transform:translateY(-3px)}
+    .c-icon{flex:none;width:44px;height:44px;border-radius:50%;background:#1a1a1a;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;color:#fff}
+    .c-icon svg{width:20px;height:20px}
+    .c-icon.kakao{background:var(--kakao);border-color:var(--kakao)}
+    .c-text{flex:1;min-width:0}
+    .c-text b{display:block;color:var(--heading);font-size:16px;font-weight:700}
+    .c-text small{display:block;color:var(--text);font-size:13px;margin-top:3px}
+    .c-arrow{color:var(--heading);font-size:18px}
+
+    /* ===== Quick menu ===== */
+    #quick_menu{position:fixed;right:30px;bottom:30px;z-index:99;display:flex;flex-direction:column;gap:10px}
+    #quick_menu li{text-align:center}
+    #quick_menu li a,#quick_menu li button{display:flex;flex-direction:column;align-items:center;transition:transform .2s}
+    #quick_menu li a:hover,#quick_menu li button:hover{transform:translateY(-3px)}
+    #quick_menu .icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.5);border:1px solid var(--border2)}
+    #quick_menu .icon svg{width:24px;height:24px}
+    #quick_menu .icon.quick{background:#fff;color:#000}
+    #quick_menu .icon.kakao{background:var(--kakao);color:var(--kakao-ink);border-color:var(--kakao)}
+    #quick_menu .icon.tel{background:#1a1a1a;color:#fff}
+    #quick_menu p{color:var(--heading);font-size:12px;font-weight:600;margin-top:6px;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+
+    /* ===== Footer ===== */
+    #footer{background:var(--bg-2);padding:80px 0;border-top:1px solid var(--border)}
+    #footer .top{display:flex;justify-content:space-between;gap:40px}
+    #footer .l_cont .logo{font-size:28px;margin-bottom:30px}
+    #footer .l_cont .info p{font-size:14px;color:#fff;opacity:.6;line-height:1.7em;font-weight:300}
+    #footer .c_cont h2{color:#fff;font-weight:600;font-size:15px;margin-bottom:15px}
+    #footer .c_cont p{font-size:14px;color:var(--text-dim);line-height:1.7em;font-weight:300}
+    #footer .c_cont .tel{margin-top:20px}
+    #footer .c_cont .tel h3{color:#fff;font-size:24px;font-weight:700}
+    #footer .c_cont .tel .mail{font-size:16px;color:#fff;margin-top:2px}
+    #footer .c_cont .tel .time{font-size:14px;color:#fff;opacity:.5;margin-top:10px}
+    #footer .r_cont ul{display:flex;flex-direction:column;gap:10px}
+    #footer .r_cont a{color:var(--text);font-size:15px;transition:color var(--t)}
+    #footer .r_cont a:hover{color:var(--heading)}
+    #footer .bottom{margin-top:70px;padding-top:40px;border-top:1px solid #222;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:14px;color:#eee}
+    #footer .bottom .power{display:inline-flex;align-items:center;gap:6px;color:#eee}
+    #footer .bottom .power .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+    /* ===== 상담 모달 ===== */
+    .tm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);z-index:1100;display:none;align-items:center;justify-content:center;padding:20px}
+    .tm-overlay.open{display:flex}
+    .tm-modal{width:min(980px,100%);max-height:92vh;overflow:auto;background:#0d0d0f;border:1px solid var(--border2);border-radius:20px;display:grid;grid-template-columns:.9fr 1.1fr;position:relative}
+    .tm-close{position:absolute;top:14px;right:18px;color:#fff;font-size:28px;line-height:1;z-index:2}
+    .tm-left{padding:40px 36px;border-right:1px solid var(--border);background:#0a0a0c}
+    .tm-left .logo{font-size:30px;margin-bottom:28px}
+    .tm-left ul li{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--border)}
+    .tm-left ul li:first-child{border-top:0;padding-top:0}
+    .tm-left .b-icon{flex:none;width:36px;height:36px;border-radius:10px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+    .tm-left .b-icon svg{width:18px;height:18px}
+    .tm-left strong{display:block;color:var(--heading);font-size:16px;margin-bottom:4px}
+    .tm-left p{font-size:14px;color:var(--text);line-height:1.6}
+    .tm-left .foot{margin-top:24px;padding:18px;border-radius:12px;background:rgba(226,187,109,.08);border:1px solid rgba(226,187,109,.3)}
+    .tm-left .foot strong{color:var(--gold)}
+    .tm-right{padding:40px 36px}
+    .tm-right h3{font-size:24px;color:var(--heading);font-weight:700;margin-bottom:6px}
+    .tm-right .note{font-size:14px;color:var(--text);margin-bottom:24px;line-height:1.6}
+    .tm-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .tm-group{margin-bottom:16px}
+    .tm-label{display:block;font-size:14px;font-weight:600;color:var(--heading);margin-bottom:8px}
+    .tm-label .req{color:var(--gold)}
+    .tm-input,.tm-select,.tm-textarea{width:100%;background:#151517;border:1px solid var(--border2);border-radius:10px;padding:12px 14px;color:#fff;font-size:15px;transition:border-color var(--t)}
+    .tm-input:focus,.tm-select:focus,.tm-textarea:focus{outline:none;border-color:#fff}
+    .tm-select option{color:#000}
+    .tm-textarea{min-height:120px;resize:vertical}
+    ::placeholder{color:#6b6b73}
+    .tm-check{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text)}
+    .tm-check input{width:16px;height:16px;accent-color:var(--gold)}
+    .tm-actions{display:flex;gap:10px;margin-top:20px}
+    .tm-actions>*{flex:1;justify-content:center;line-height:48px;border-radius:40px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;transition:transform .2s}
+    .tm-actions>*:hover{transform:translateY(-2px)}
+    .tm-actions .ghost{border:1px solid var(--border2);color:#fff}
+    .tm-result{margin-top:14px;font-size:14px;color:var(--gold);min-height:1.4em}
+
+    /* ===== Responsive ===== */
+    @media (max-width:1280px){
+      .m_txt h2{font-size:47px}.m_txt h3{font-size:22px}.m_txt p{font-size:18px}
+      #hero h2{font-size:56px}#hero p{font-size:20px}#hero .btn_box{margin-top:40px}
+      #hero .counter{margin-top:80px;gap:80px}#hero .counter li .num .count{font-size:42px}
+      #sec1{padding:120px 0}#sec2,#pricing{padding:120px 0}#sec6{padding-bottom:120px}#sec7{padding-top:120px}#contact{padding-bottom:120px}
+      #footer .top{flex-wrap:wrap}#footer .r_cont{display:none}
+    }
+    @media (max-width:1024px){
+      :root{--header-h:70px}
+      .m_txt h2{font-size:43px}.m_txt.flex{flex-direction:column;align-items:flex-start;gap:25px}
+      #header .gnb{display:none}.menuToggle{display:flex}
+      #header .h_btn .cta{padding:5px 13px 5px 8px;font-size:14px}#header .h_btn .cta span{font-size:12px}
+      body.on{overflow:hidden}
+      .mo_bg{display:block;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:996;opacity:0;visibility:hidden;transition:opacity var(--t)}
+      .mo_bg.on{opacity:1;visibility:visible}
+      .m_gnb{display:block;position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100%;background:#0a0a0c;z-index:997;padding:90px 25px 30px;overflow-y:auto;transition:right var(--t);border-left:1px solid var(--border)}
+      .m_gnb.on{right:0}
+      .m_gnb li{border-bottom:1px solid var(--border)}
+      .m_gnb li a{display:block;padding:16px 0;font-size:16px;font-weight:600;color:var(--heading)}
+      #hero h2{font-size:48px;margin-bottom:15px}#hero p{font-size:19px}
+      #hero .counter{margin-top:70px;gap:60px}#hero .counter li p{font-size:15px}#hero .counter li .num .count{font-size:40px}
+      #sec1 .inner{flex-direction:column;gap:50px}#sec1 .l_cont{position:static;width:100%}#sec1 .r_cont{width:100%}
+      #sec1 .step_wrap li{grid-template-columns:90px 1fr}#sec1 .step_wrap li h3{font-size:22px}#sec1 .step_wrap li p{font-size:16px}
+      .plans{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+      .contact-cards{grid-template-columns:1fr}
+      .tm-modal{grid-template-columns:1fr}.tm-left{display:none}
+      #footer .top{flex-direction:column}
+    }
+    @media (max-width:768px){
+      :root{--header-h:62px}
+      .m_txt h2{font-size:36px}.m_txt p{font-size:17px}
+      #hero{min-height:600px}#hero h2{font-size:34px}#hero p{font-size:17px}#hero .btn_box{margin-top:30px}
+      #hero .icon .box{width:66px;height:66px}
+      #hero .counter{margin-top:50px;gap:24px 40px;display:grid;grid-template-columns:repeat(2,1fr)}#hero .counter li .num .count{font-size:34px}
+      .btn_box>a,.btn_box>button{line-height:42px;font-size:15px}.btn1{padding:0 22px}.btn2{padding:0 20px}.btn2.free{padding:0 20px 0 12px}.btn2 span{line-height:26px;font-size:13px}
+      #sec1{padding:90px 0}#sec2,#pricing{padding:90px 0}#sec6{padding-bottom:90px}#sec7{padding-top:90px}#contact{padding-bottom:90px}
+      #sec1 .step_wrap li{grid-template-columns:1fr;gap:10px;padding:26px 0}
+      #sec2 .design_wrap .box li{width:280px;height:187px}#sec2 .m_txt{margin-bottom:50px}
+      #sec6 .top{margin-bottom:40px}#sec6 .slide-item{flex-basis:80vw}#sec6 .arrow{width:46px;font-size:18px}
+      #sec7 .visual{height:280px}
+      .common{padding:22px 20px}
+      .tm-row{grid-template-columns:1fr}.tm-right{padding:30px 22px}.tm-actions{flex-direction:column}
+      #quick_menu{right:14px;bottom:14px}#quick_menu .icon{width:50px;height:50px}#quick_menu .icon svg{width:22px;height:22px}
+      #footer{padding:60px 0 120px}#footer .bottom{flex-direction:column;align-items:flex-start;margin-top:50px;padding-top:30px}
+    }
+    @media (max-width:420px){#hero h2{font-size:29px}#hero p{font-size:15px}#hero .counter{gap:20px 16px}#hero .counter li .num .count{font-size:30px}#hero .counter li .num .count+span{font-size:18px}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rise,#hero .icon{opacity:1;transform:none}}
   </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#top"><span class="lg-bold">hongs</span><span class="lg-light">lab</span><span class="lg-dot"></span><span class="lab-status" title="운영 중" aria-hidden="true"></span></a><nav class="links" id="navLinks"><a href="#examples">포트폴리오</a><a href="#pricing">제작 요금</a><a href="#process">제작 과정</a><a href="#contact">상담하기</a></nav><button class="menu-btn" aria-label="메뉴 열기" id="menuBtn">☰</button></div></header>
-<main id="top">
-<section class="hero"><div class="wrap"><div class="eyebrow">맞춤형 앱,웹제작 스튜디오</div><div class="hero-logo-wrap"><div class="hero-logo"><span class="lg-bold">hongs</span><span class="lg-light">lab</span><span class="lg-dot"></span></div></div><div class="hero-actions"><a class="btn light" href="#examples">제작사례 보기</a><a class="btn primary" href="#contact">무료 상담하기</a></div></div></section>
-<section class="section portfolio-dark" id="examples"><div class="wrap"><div class="eyebrow">PORTFOLIO</div><h2 class="title">실제 제작사례</h2><div class="examples" id="portfolioGrid"></div></div></section>
-<div class="ex-modal" id="exModal"><button class="ex-modal-close" id="exModalClose" aria-label="닫기">✕</button><div class="ex-modal-inner"><img id="exModalImg" src="" alt=""><br><a id="exModalVisit" class="btn ex-visit" href="#" target="_blank" rel="noopener">사이트 방문 →</a></div></div>
-<section class="section pricing" id="pricing"><div class="wrap"><div class="eyebrow">PRICING</div><h2 class="title">제작요금</h2><p class="lead">모든 견적은 부가세가 포함되지 않은 견적입니다. 도메인, 호스팅 등 외부 서비스 비용은 별도이며, 작업 범위는 상담 후 최종 확인합니다.</p><div class="plans"><article class="plan"><span class="discount">67% 할인</span><h3>실속형</h3><p class="for">개인 영업자·소규모 업체 추천</p><p class="old">정가 490,000원</p><p class="price">159,000원</p><p class="period">예상 제작 기간 3~5영업일</p><ul><li>한 페이지, 최대 5개 구역</li><li>준비된 디자인 중 선택</li><li>PC·모바일 대응</li><li>전화·카카오톡·지도 링크</li><li>외부 문의 링크 연결</li><li>검색 기본 설정</li><li>제작 중 수정 1회</li><li>기존 명함 틀 인쇄용 파일 1종</li></ul><a class="btn outline select-plan" data-plan="실속형" href="#contact">이 상품 문의하기</a></article><article class="plan recommended"><span class="badge">추천 상품</span><span class="discount">66% 할인</span><h3>기본형</h3><p class="for">지역 업체·소상공인 추천</p><p class="old">정가 890,000원</p><p class="price">299,000원</p><p class="period">예상 제작 기간 5~10영업일</p><ul><li>최대 3페이지, 최대 12개 구역</li><li>색상·배치 조정</li><li>PC·모바일 대응</li><li>전화·카카오톡·지도 연결</li><li>기본 문의폼 1개</li><li>검색도구 등록 지원</li><li>제작 중 수정 2회</li><li>기본 명함 인쇄용 파일 1종</li></ul><a class="btn primary select-plan" data-plan="기본형" href="#contact">이 상품 문의하기</a></article><article class="plan"><span class="discount">59% 할인</span><h3>확장형</h3><p class="for">소개할 서비스와 콘텐츠가 많은 기업 추천</p><p class="old">정가 1,490,000원</p><p class="price">599,000원부터</p><p class="period">예상 제작 기간 10~15영업일</p><ul><li>최대 5페이지, 최대 20개 구역</li><li>사전 협의 맞춤 구성</li><li>PC·모바일 대응</li><li>전화·카카오톡·지도 연결</li><li>기본 문의폼 1개</li><li>페이지별 검색 설정</li><li>제작 중 수정 3회</li><li>기본 명함 인쇄용 파일 1종</li></ul><p class="notice">최종 금액은 작업 범위 확인 후 확정됩니다.</p><a class="btn outline select-plan" data-plan="확장형" href="#contact">이 상품 문의하기</a></article></div><div class="common"><strong>공통 안내</strong><ul><li>페이지는 별도 주소로 열리는 화면이며, 구역은 회사 소개·서비스·오시는 길처럼 한 페이지 안에서 나뉘는 영역입니다.</li><li>홈페이지에 들어갈 글·사진·로고는 고객 제공 자료를 기준으로 합니다. 제작 기간은 자료와 착수금이 모두 접수된 이후부터 계산합니다.</li><li>수정은 기존에 합의한 구성 안에서의 변경입니다. 전체 디자인 변경과 기능 추가는 별도 견적입니다.</li><li>문의폼 등 외부 유료 서비스를 사용하면 이용료가 별도로 발생할 수 있으며, 검색 기본 설정은 검색 순위를 보장하지 않습니다.</li></ul></div></div></section>
-<section class="section" id="process"><div class="wrap"><div class="eyebrow">PROCESS</div><h2 class="title">상담부터 공개까지의 과정</h2><div class="process"><div class="step"><b>01</b><p>상담</p></div><div class="step"><b>02</b><p>범위·견적 확정</p></div><div class="step"><b>03</b><p>자료 전달·착수금 결제</p></div><div class="step"><b>04</b><p>제작</p></div><div class="step"><b>05</b><p>미리보기·수정</p></div><div class="step"><b>06</b><p>잔금 결제</p></div><div class="step"><b>07</b><p>정식 공개·인계</p></div></div><div class="info-grid"><article class="info"><h3>결제 안내</h3><p>실속형은 전액 선결제입니다. 기본형·확장형은 착수금 50%, 잔금 50%로 진행합니다. 추가 작업은 승인 후 선결제, 유지보수는 월 선결제입니다. 외부 비용·인쇄비는 실비로 처리하며 취소 시 완료 작업과 지출 비용을 기준으로 정산합니다.</p></article><article class="info"><h3>미리 준비하면 좋은 자료</h3><ul><li>상호·연락처·주소</li><li>사업 및 서비스 소개</li><li>로고·사진</li><li>참고할 디자인·색상</li><li>최종 승인 담당자 정보</li></ul></article></div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="eyebrow">CONTACT</div><h2 class="title">상담 안내</h2><p class="lead">문의는 카카오톡 채널에서 가장 빠르게 확인합니다. 업종, 필요한 기능, 원하시는 공개 시점을 함께 보내 주시면 됩니다.</p><div class="contact-cards">
-  <a class="c-card" href="http://pf.kakao.com/_KxojrX" target="_blank" rel="noopener"><span class="c-icon kakao">K</span><span class="c-text"><b>카카오톡 채널 상담하기</b><small>홍스랩 카카오톡 채널</small></span><span class="c-arrow">→</span></a>
-  <a class="c-card" href="tel:01086039867"><span class="c-icon">☎</span><span class="c-text"><b>전화 상담</b><small>010-8603-9867</small></span><span class="c-arrow">→</span></a>
-  <a class="c-card" href="mailto:hongslab1@naver.com"><span class="c-icon">@</span><span class="c-text"><b>이메일 상담</b><small>hongslab1@naver.com</small></span><span class="c-arrow">→</span></a>
-</div>
-<div class="contact-split">
-  <aside class="contact-side">
-    <h3>홍스랩 상담 채널</h3>
-    <p>작업 범위를 확인한 뒤 진행 가능 일정과 최종 견적을 안내합니다. 상담은 카카오톡 채널에서 기록으로 남아 편하게 이어갈 수 있습니다.</p>
-    <a class="btn kakao-btn" href="http://pf.kakao.com/_KxojrX" target="_blank" rel="noopener">카카오톡 채널 상담하기</a>
-    <div class="side-row"><a class="btn primary" href="tel:01086039867">전화 상담</a><a class="btn outline" href="mailto:hongslab1@naver.com">이메일 상담</a></div>
-    <div class="side-info">전화 010-8603-9867<br>이메일 hongslab1@naver.com</div>
-  </aside>
-  <form class="form" id="contactForm">
-    <h3>상담 내용 정리</h3>
-    <p class="form-note">작성 후 카카오톡 상담 버튼을 누르면 내용이 복사되고 채널이 열립니다. 채팅창에 붙여넣어 전송하면 됩니다.</p>
-    <div class="form-grid">
-      <div class="field"><label for="company">업체명 / 이름 <span class="notice">(선택)</span></label><input id="company" type="text" placeholder="예: 홍스상회 / 홍길동"></div>
-      <div class="field"><label for="phone">연락처 <span class="required">*</span></label><input id="phone" type="text" placeholder="연락 가능한 번호를 입력하세요"></div>
-      <div class="field full"><label for="interest">관심 상품</label><select id="interest"><option>상담 전 선택</option><option>실속형</option><option>기본형</option><option>확장형</option></select></div>
-      <div class="field full"><label for="message">문의 내용 <span class="required">*</span></label><textarea id="message" rows="5" placeholder="업종, 필요한 페이지 또는 기능, 원하는 공개 시점 등을 적어 주세요."></textarea></div>
-      <div class="field full"><label class="privacy"><input type="checkbox" id="privacy"> 개인정보 수집 및 상담 목적의 이용에 동의합니다. <span class="required">*</span></label></div>
+<div id="wrap">
+
+  <!-- ===== Header ===== -->
+  <div id="header">
+    <div class="inner">
+      <a class="logo" href="#top" aria-label="홍스랩 홈"><b>hongs</b><i>lab</i><span class="dot"></span></a>
+      <nav class="gnb" aria-label="주 메뉴">
+        <a href="#sec6">제작사례</a>
+        <a href="#sec1">제작 과정</a>
+        <a href="#pricing">제작 요금</a>
+        <a href="#contact">상담하기</a>
+      </nav>
+      <div class="h_btn">
+        <button type="button" class="cta js-open-inquiry"><span>무료</span> 상담 신청</button>
+        <button type="button" class="menuToggle" id="menuToggle" aria-label="모바일 메뉴 열기"><span></span><span></span><span></span></button>
+      </div>
     </div>
-    <div class="form-actions"><button class="btn kakao-btn" type="button" id="kakaoSend">카카오톡으로 상담하기</button><button class="btn outline" type="reset">내용 지우기</button></div>
-    <div class="result" id="formResult" aria-live="polite"></div>
-  </form>
+  </div>
+  <div class="m_gnb" id="mGnb">
+    <ul>
+      <li><a href="#sec6">제작사례</a></li>
+      <li><a href="#sec1">제작 과정</a></li>
+      <li><a href="#pricing">제작 요금</a></li>
+      <li></li>
+      <li><a href="#contact">상담하기</a></li>
+    </ul>
+  </div>
+  <div class="mo_bg" id="moBg"></div>
+
+  <div id="content">
+    <!-- ===== Hero ===== -->
+    <div id="hero">
+      <a id="top"></a>
+      <div class="visual"><div class="img"></div><div class="bg"></div></div>
+      <div class="txt_wrap">        <h2 class="rise" style="transition-delay:.15s">고객을 부르는 홈페이지,<br><span class="logo"><b>hongs</b><i>lab</i><span class="dot"></span></span>이 직접 만듭니다.</h2>
+        <p class="rise" style="transition-delay:.3s">맞춤형 앱·웹제작 스튜디오 홍스랩<br>무료 상담으로 범위와 견적을 먼저 확인하고 결정하세요.</p>
+        <div class="btn_box rise" style="transition-delay:.45s">
+          <a href="#sec6" class="btn1">제작사례 보기</a>
+          <button type="button" class="btn2 free js-open-inquiry"><span>무료</span> 3분만에 상담 신청하기</button>
+        </div>
+        <ul class="counter rise" style="transition-delay:.6s">
+          <li><p>공개된 제작사례</p><div class="num"><span class="count" data-to="9">0</span><span>건+</span></div></li>
+          <li><p>가장 빠른 제작 기간</p><div class="num"><span class="count" data-to="3">0</span><span>영업일</span></div></li>
+          <li><p>시작 가격</p><div class="num"><span class="count" data-to="15.9" data-dec="1">0</span><span>만원~</span></div></li>
+          <li><p>PC·모바일 대응</p><div class="num"><span class="count" data-to="100">0</span><span>%</span></div></li>
+        </ul>
+      </div>
+      <div class="scroll">SCROLL</div>
+    </div>
+
+    <!-- ===== sec2: 제작사례 마퀴 ===== -->
+    <div class="section" id="sec2">
+      <div class="inner">
+        <div class="m_txt center">
+          <div class="tag">Works</div>
+          <h2>실제로 운영 중인<br>홈페이지와 웹앱</h2>
+        </div>
+      </div>
+      <a href="#sec6" class="design_wrap" aria-label="제작사례 보기">
+        <div class="bg"></div>
+        <ul class="box" id="marquee1"></ul>
+        <ul class="box rev" id="marquee2"></ul>
+      </a>
+      <div class="btn_box"><a href="#sec6" class="btn2">제작사례 자세히 보기</a></div>
+    </div>
+
+    <!-- ===== sec6: 실제 제작사례 ===== -->
+    <div class="section" id="sec6">
+      <div class="inner">
+        <div class="top">
+          <div class="m_txt">
+            <div class="tag">Portfolio</div>
+            <h2>실제 고객 제작사례</h2>
+          </div>
+          <div class="arrow_wrap"><button type="button" class="arrow prev" aria-label="이전">←</button><button type="button" class="arrow next" aria-label="다음">→</button></div>
+        </div>
+        <div class="cont"><div class="track" id="portfolioTrack"></div></div>
+      </div>
+    </div>
+    <div class="ex-modal" id="exModal"><button type="button" class="ex-modal-close" id="exModalClose" aria-label="닫기">✕</button><div class="ex-modal-inner"><img id="exModalImg" src="" alt=""><div class="btn_box"><a id="exModalVisit" class="btn2" href="#" target="_blank" rel="noopener">사이트 방문 →</a></div></div></div>
+
+    <!-- ===== sec1: 제작 과정 ===== -->
+    <div class="section" id="sec1">
+      <div class="inner">
+        <div class="l_cont">
+          <div class="m_txt">
+            <div class="tag">Process</div>
+            <h2>상담부터 공개까지,<br>7단계로 진행됩니다.</h2>
+            <p>범위와 견적을 먼저 확정한 뒤 제작에 들어갑니다. 진행 중에는 미리보기 화면으로 확인하고 수정하실 수 있습니다.</p>
+          </div>
+          <div class="btn_box"><button type="button" class="btn2 free js-open-inquiry"><span>무료</span> 상담 신청</button></div>
+        </div>
+        <div class="r_cont">
+          <ul class="step_wrap" id="stepWrap">
+            <li class="on"><div class="step">STEP 1</div><div><h3>상담</h3><p>업종, 필요한 페이지와 기능, 원하시는 공개 시점을 카카오톡·전화·이메일로 알려주세요.</p></div></li>
+            <li><div class="step">STEP 2</div><div><h3>범위·견적 확정</h3><p>상담 내용을 바탕으로 작업 범위를 정리하고 최종 견적과 일정을 안내합니다.</p></div></li>
+            <li><div class="step">STEP 3</div><div><h3>자료 전달·착수금 결제</h3><p>상호·연락처·로고·사진 등 자료를 보내주시면 착수금 확인 후 제작 기간 계산이 시작됩니다.</p></div></li>
+            <li><div class="step">STEP 4</div><div><h3>제작</h3><p>PC와 모바일 모두 대응하는 화면으로 제작합니다. 전화·카카오톡·지도 연결도 기본으로 포함됩니다.</p></div></li>
+            <li><div class="step">STEP 5</div><div><h3>미리보기·수정</h3><p>미리보기 주소로 확인하시고, 상품별 수정 횟수 안에서 합의한 구성 범위의 변경을 반영합니다.</p></div></li>
+            <li><div class="step">STEP 6</div><div><h3>잔금 결제</h3><p>최종 확인이 끝나면 잔금을 결제합니다. 실속형은 전액 선결제로 진행됩니다.</p></div></li>
+            <li><div class="step">STEP 7</div><div><h3>정식 공개·인계</h3><p>도메인 연결 후 정식 공개하고, 관리에 필요한 정보와 파일을 인계해 드립니다.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== pricing ===== -->
+    <div class="section" id="pricing">
+      <div class="inner">
+        <div class="m_txt">
+          <div class="tag">Pricing</div>
+          <h2>제작 요금</h2>
+          <p>모든 견적은 부가세 별도입니다. 도메인·호스팅 등 외부 서비스 비용은 별도이며, 작업 범위는 상담 후 최종 확인합니다.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <span class="discount">67% 할인</span>
+            <h3>실속형</h3><p class="for">개인 영업자·소규모 업체 추천</p>
+            <p class="old">정가 490,000원</p><p class="price">159,000원</p><p class="period">예상 제작 기간 3~5영업일</p>
+            <ul><li>한 페이지, 최대 5개 구역</li><li>준비된 디자인 중 선택</li><li>PC·모바일 대응</li><li>전화·카카오톡·지도 링크</li><li>외부 문의 링크 연결</li><li>검색 기본 설정</li><li>제작 중 수정 1회</li><li>기존 명함 틀 인쇄용 파일 1종</li></ul>
+            <div class="btn_box"><a class="btn_line select-plan" data-plan="실속형" href="#contact">이 상품 문의하기</a></div>
+          </article>
+          <article class="plan recommended">
+            <span class="badge">추천 상품</span>
+            <span class="discount">66% 할인</span>
+            <h3>기본형</h3><p class="for">지역 업체·소상공인 추천</p>
+            <p class="old">정가 890,000원</p><p class="price">299,000원</p><p class="period">예상 제작 기간 5~10영업일</p>
+            <ul><li>최대 3페이지, 최대 12개 구역</li><li>색상·배치 조정</li><li>PC·모바일 대응</li><li>전화·카카오톡·지도 연결</li><li>기본 문의폼 1개</li><li>검색도구 등록 지원</li><li>제작 중 수정 2회</li><li>기본 명함 인쇄용 파일 1종</li></ul>
+            <div class="btn_box"><a class="btn2 select-plan" data-plan="기본형" href="#contact">이 상품 문의하기</a></div>
+          </article>
+          <article class="plan">
+            <span class="discount">59% 할인</span>
+            <h3>확장형</h3><p class="for">소개할 서비스와 콘텐츠가 많은 기업 추천</p>
+            <p class="old">정가 1,490,000원</p><p class="price">599,000원~</p><p class="period">예상 제작 기간 10~15영업일</p>
+            <ul><li>최대 5페이지, 최대 20개 구역</li><li>사전 협의 맞춤 구성</li><li>PC·모바일 대응</li><li>전화·카카오톡·지도 연결</li><li>기본 문의폼 1개</li><li>페이지별 검색 설정</li><li>제작 중 수정 3회</li><li>기본 명함 인쇄용 파일 1종</li></ul>
+            <p class="notice">최종 금액은 작업 범위 확인 후 확정됩니다.</p>
+            <div class="btn_box"><a class="btn_line select-plan" data-plan="확장형" href="#contact">이 상품 문의하기</a></div>
+          </article>
+        </div>
+        <div class="common">
+          <strong>공통 안내</strong>
+          <ul>
+            <li>페이지는 별도 주소로 열리는 화면이며, 구역은 회사 소개·서비스·오시는 길처럼 한 페이지 안에서 나뉘는 영역입니다.</li>
+            <li>홈페이지에 들어갈 글·사진·로고는 고객 제공 자료를 기준으로 합니다. 제작 기간은 자료와 착수금이 모두 접수된 이후부터 계산합니다.</li>
+            <li>수정은 기존에 합의한 구성 안에서의 변경입니다. 전체 디자인 변경과 기능 추가는 별도 견적입니다.</li>
+            <li>문의폼 등 외부 유료 서비스를 사용하면 이용료가 별도로 발생할 수 있으며, 검색 기본 설정은 검색 순위를 보장하지 않습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== sec7: 클로징 CTA ===== -->
+    <div class="section" id="sec7">
+      <div class="m_txt">
+        <h2>좋은 홈페이지는 결국<br>사업을 이해하는 사람이 만듭니다.</h2>
+        <div class="btn_box">
+          <a href="#sec6" class="btn1">제작사례 보기</a>
+          <button type="button" class="btn2 free js-open-inquiry"><span>무료</span> 3분만에 상담 신청하기</button>
+        </div>
+      </div>
+      <div class="visual"><div class="img"></div></div>
+    </div>
+
+    <!-- ===== contact ===== -->
+    <div class="section" id="contact">
+      <div class="inner">
+        <div class="contact-cards">
+          <a class="c-card" href="http://pf.kakao.com/_KxojrX" target="_blank" rel="noopener"><span class="c-icon kakao"><svg viewBox="0 0 24 24" fill="#391B1B"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.55 1.5 4.83 3.84 6.3-.12.86-.46 2.24-1.34 3.7 0 0 2.02-.34 4.1-1.7A11.6 11.6 0 0 0 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg></span><span class="c-text"><b>카카오톡 채널 상담</b><small>가장 빠르게 확인합니다 · 기록이 남아 편합니다</small></span><span class="c-arrow">→</span></a>
+          <a class="c-card" href="tel:01086039867"><span class="c-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg></span><span class="c-text"><b>전화 상담</b><small>010-8603-9867</small></span><span class="c-arrow">→</span></a>
+          <a class="c-card" href="mailto:hongslab1@naver.com"><span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span class="c-text"><b>이메일 상담</b><small>hongslab1@naver.com</small></span><span class="c-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Quick menu ===== -->
+  <ul id="quick_menu">
+    <li><button type="button" class="js-open-inquiry"><span class="icon quick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><p>빠른문의</p></button></li>
+    <li><a href="http://pf.kakao.com/_KxojrX" target="_blank" rel="noopener"><span class="icon kakao"><svg viewBox="0 0 24 24" fill="#391B1B"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.55 1.5 4.83 3.84 6.3-.12.86-.46 2.24-1.34 3.7 0 0 2.02-.34 4.1-1.7A11.6 11.6 0 0 0 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg></span><p>카카오톡</p></a></li>
+    <li><a href="tel:01086039867"><span class="icon tel"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg></span><p>전화문의</p></a></li>
+  </ul>
+
+  <!-- ===== Footer ===== -->
+  <div id="footer">
+    <div class="inner">
+      <div class="top">
+        <div class="l_cont">
+          <div class="logo"><b>hongs</b><i>lab</i><span class="dot"></span></div>
+          <div class="info">
+            <p>세종특별자치시 조치원읍 도원1로 16</p>
+            <p>사업자등록번호 : 176-43-01356</p>
+            <p>대표자 : 홍순경</p>
+            <p>© Hongs Lab. All rights reserved.</p>
+          </div>
+        </div>
+        <div class="c_cont">
+          <h2>고객센터</h2>
+          <p>제작·수정·유지보수 문의는<br>아래 연락처로 편하게 주세요.</p>
+          <div class="tel">
+            <h3><a href="tel:01086039867">010-8603-9867</a></h3>
+            <div class="mail"><a href="mailto:hongslab1@naver.com">hongslab1@naver.com</a></div>
+            <div class="time">카카오톡 채널 상담 · 확인 후 순차 답변</div>
+          </div>
+        </div>
+        <div class="r_cont">
+          <ul>
+            <li><a href="#sec6">제작사례</a></li>
+            <li><a href="#sec1">제작 과정</a></li>
+            <li><a href="#pricing">제작 요금</a></li>
+            <li></li>
+            <li><a href="#contact">상담하기</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <div>맞춤형 앱·웹제작 스튜디오 홍스랩</div>
+        <span class="power"><span class="dot"></span>Made by hongslab</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 상담 모달 ===== -->
+  <div class="tm-overlay" id="inquiryModal" role="dialog" aria-modal="true" aria-labelledby="inqTitle">
+    <div class="tm-modal">
+      <button type="button" class="tm-close" id="inquiryClose" aria-label="닫기">×</button>
+      <div class="tm-left">
+        <div class="logo"><b>hongs</b><i>lab</i><span class="dot"></span></div>
+        <ul>
+          <li><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><div><strong>빠른 완성</strong><p>실속형은 자료 접수 후 3~5영업일 안에 미리보기까지 진행합니다.</p></div></li>
+          <li><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><strong>범위 먼저, 견적 확정</strong><p>상담에서 작업 범위를 정리하고 최종 견적과 일정을 먼저 안내합니다.</p></div></li>
+          <li><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span><div><strong>PC·모바일 기본 대응</strong><p>전화·카카오톡·지도 연결까지 모든 상품에 기본으로 포함됩니다.</p></div></li>
+        </ul>
+        <div class="foot"><strong>무료 상담</strong><p>내용을 남겨주시면 사업에 맞는 상품과 예상 견적을 안내해 드립니다.</p></div>
+      </div>
+      <div class="tm-right">
+        <h3 id="inqTitle">제작 상담 신청서</h3>
+        <p class="note">작성 후 「카카오톡으로 보내기」를 누르면 내용이 복사되고 채널이 열립니다. 채팅창에 붙여넣어 전송해 주세요.</p>
+        <form id="contactForm" autocomplete="off">
+          <div class="tm-row">
+            <div class="tm-group"><label class="tm-label" for="company">업체명 / 이름</label><input class="tm-input" id="company" type="text" placeholder="예: 홍스상회 / 홍길동"></div>
+            <div class="tm-group"><label class="tm-label" for="phone">연락처 <span class="req">*</span></label><input class="tm-input" id="phone" type="tel" placeholder="010-0000-0000"></div>
+          </div>
+          <div class="tm-group"><label class="tm-label" for="interest">관심 상품</label><select class="tm-select" id="interest"><option>상담 전 선택</option><option>실속형</option><option>기본형</option><option>확장형</option><option>앱·웹앱 제작</option></select></div>
+          <div class="tm-group"><label class="tm-label" for="message">문의 내용 <span class="req">*</span></label><textarea class="tm-textarea" id="message" maxlength="1000" placeholder="업종, 필요한 페이지 또는 기능, 원하시는 공개 시점, 참고 사이트 등을 적어 주세요."></textarea></div>
+          <div class="tm-group"><label class="tm-check"><input type="checkbox" id="privacy"> 개인정보 수집 및 상담 목적의 이용에 동의합니다. <span class="req" style="color:var(--gold)">*</span></label></div>
+          <div class="tm-actions">
+            <button type="button" class="btn_kakao" id="kakaoSend">카카오톡으로 보내기</button>
+            <button type="button" class="ghost" id="copyOnly">내용만 복사</button>
+          </div>
+          <div class="tm-result" id="formResult" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
-</div></section>
-</main>
-<footer><div class="wrap"><div class="foot-logo"><span class="lg-bold">hongs</span><span class="lg-light">lab</span><span class="lg-dot"></span></div><div class="biz"><div>대표자</div><div>홍순경</div><div>사업자등록번호</div><div>176-43-01356</div><div>전화</div><div><a href="tel:01086039867" style="color:var(--gold)">010-8603-9867</a></div><div>이메일</div><div><a href="mailto:hongslab1@naver.com" style="color:var(--gold)">hongslab1@naver.com</a></div><div>주소</div><div>세종특별자치시 조치원읍 도원1로 16</div></div><p>© Hongs Lab. All rights reserved.</p></div></footer>
-<div class="mobile-bar"><a class="btn light" href="#pricing">제작 요금 보기</a><a class="btn primary" href="#contact">상담하기</a></div>
-<a class="kakao-float" href="http://pf.kakao.com/_KxojrX" target="_blank" rel="noopener" aria-label="카카오톡 상담 바로가기"><svg viewBox="0 0 24 24" fill="#391B1B"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.55 1.5 4.83 3.84 6.3-.12.86-.46 2.24-1.34 3.7 0 0 2.02-.34 4.1-1.7A11.6 11.6 0 0 0 12 19c5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg></a>
-<a class="phone-float" href="tel:01086039867" aria-label="전화 연결"><svg viewBox="0 0 24 24" fill="#1c1408"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg></a>
+
 <script>
+/* ===== 데이터 ===== */
 const PORTFOLIO=[
  ['https://antaean.kr/','안태인펜싱클럽 홈페이지','학원 소개 · 프로그램 안내 · 강사진 · 체험수업 신청 · 오시는 길'],
  ['https://clearcheolgeo.com/','클리어철거 홈페이지','시공사례 · 철거지원금 안내 · 견적문의 · 전화상담'],
@@ -104,14 +597,71 @@ const PORTFOLIO=[
  ['https://gunaminc.kr/','(주)구남종합인력 홈페이지','업종별 인력 소개 · 서비스 안내 · 전화 문의 연결']
 ];
 const shot=(url,w)=>`https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=${w}`;
-document.getElementById('portfolioGrid').innerHTML=PORTFOLIO.map(p=>`<article class="example"><div class="ex-shot"><img loading="lazy" src="${shot(p[0],900)}" data-full="${shot(p[0],1600)}" alt="${p[1]} 미리보기"></div><div class="ex-body"><strong>${p[1]}</strong><p>${p[2]}</p><div class="ex-actions"><button type="button" class="btn ex-preview" data-url="${p[0]}">크게 보기</button><a class="btn ex-visit" href="${p[0]}" target="_blank" rel="noopener">사이트 방문 →</a></div></div></article>`).join('');
+const KAKAO='http://pf.kakao.com/_KxojrX';
+
+/* ===== 마퀴 (2줄, 무한 루프용 2회 복제) ===== */
+function marqueeHTML(list){const items=list.map(p=>`<li><img loading="lazy" src="${shot(p[0],780)}" alt="${p[1]} 미리보기"></li>`).join('');return items+items}
+document.getElementById('marquee1').innerHTML=marqueeHTML(PORTFOLIO);
+document.getElementById('marquee2').innerHTML=marqueeHTML([...PORTFOLIO].reverse());
+
+/* ===== 포트폴리오 슬라이더 ===== */
+const track=document.getElementById('portfolioTrack');
+track.innerHTML=PORTFOLIO.map(p=>`<article class="slide-item"><div class="img"><img loading="lazy" src="${shot(p[0],900)}" data-full="${shot(p[0],1600)}" alt="${p[1]} 미리보기"><button type="button" class="zoom ex-preview" data-url="${p[0]}" aria-label="크게 보기">⤢</button></div><p class="name">${p[1]}</p><p class="desc">${p[2]}</p><a class="visit" href="${p[0]}" target="_blank" rel="noopener">사이트 방문 →</a></article>`).join('');
+const slideStep=()=>{const it=track.querySelector('.slide-item');return it?it.getBoundingClientRect().width+30:400};
+document.querySelector('#sec6 .prev').addEventListener('click',()=>track.scrollBy({left:-slideStep(),behavior:'smooth'}));
+document.querySelector('#sec6 .next').addEventListener('click',()=>track.scrollBy({left:slideStep(),behavior:'smooth'}));
+
+/* ===== 이미지 모달 ===== */
 const exModal=document.getElementById('exModal'),exModalImg=document.getElementById('exModalImg'),exModalVisit=document.getElementById('exModalVisit');
-document.querySelectorAll('.ex-preview').forEach(btn=>btn.addEventListener('click',()=>{const img=btn.closest('.example').querySelector('.ex-shot img');exModalImg.src=img.dataset.full;exModalImg.alt=img.alt;exModalVisit.href=btn.dataset.url;exModal.classList.add('open')}));
+document.querySelectorAll('.ex-preview').forEach(btn=>btn.addEventListener('click',()=>{const img=btn.closest('.img').querySelector('img');exModalImg.src=img.dataset.full;exModalImg.alt=img.alt;exModalVisit.href=btn.dataset.url;exModal.classList.add('open')}));
 document.getElementById('exModalClose').addEventListener('click',()=>exModal.classList.remove('open'));
 exModal.addEventListener('click',e=>{if(e.target===exModal)exModal.classList.remove('open')});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')exModal.classList.remove('open')});
-document.getElementById('kakaoSend').addEventListener('click',async()=>{const co=company.value.trim(),ph=phone.value.trim(),msg=message.value.trim(),ok=privacy.checked;if(!ph||!msg||!ok){formResult.style.color='';formResult.textContent='연락처, 문의 내용, 개인정보 동의는 필수입니다.';return}const text=`[홍스랩 홈페이지 제작 상담]\n업체명/이름: ${co||'미입력'}\n연락처: ${ph}\n관심 상품: ${interest.value}\n문의 내용:\n${msg}`;try{await navigator.clipboard.writeText(text)}catch{}formResult.style.color='#e2bb6d';formResult.textContent='내용이 복사되었습니다. 열리는 카카오톡 채팅창에 붙여넣어 전송해 주세요.';window.open('http://pf.kakao.com/_KxojrX','_blank','noopener')});
-const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+/* ===== 헤더 스크롤 / 모바일 메뉴 ===== */
+const header=document.getElementById('header');
+const onScroll=()=>header.classList.toggle('on',window.scrollY>20);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+const menuToggle=document.getElementById('menuToggle'),mGnb=document.getElementById('mGnb'),moBg=document.getElementById('moBg');
+const setMenu=open=>{menuToggle.classList.toggle('on',open);mGnb.classList.toggle('on',open);moBg.classList.toggle('on',open);document.body.classList.toggle('on',open)};
+menuToggle.addEventListener('click',()=>setMenu(!mGnb.classList.contains('on')));
+moBg.addEventListener('click',()=>setMenu(false));
+mGnb.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+/* ===== 히어로 등장 + 카운터 ===== */
+window.addEventListener('load',()=>{
+  document.querySelectorAll('#hero .rise').forEach(el=>el.classList.add('in'));
+  document.querySelectorAll('#hero .count').forEach(el=>{
+    const to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),start=performance.now(),dur=1400;
+    const tick=t=>{const p=Math.min(1,(t-start)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(tick)};
+    setTimeout(()=>requestAnimationFrame(tick),500);
+  });
+});
+
+/* ===== 프로세스 스텝 하이라이트 ===== */
+const steps=[...document.querySelectorAll('#stepWrap li')];
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){steps.forEach(s=>s.classList.remove('on'));en.target.classList.add('on')}})},{rootMargin:'-45% 0px -45% 0px',threshold:0});
+  steps.forEach(s=>io.observe(s));
+}
+
+
+/* ===== 상담 모달 ===== */
+const inquiryModal=document.getElementById('inquiryModal');
+const openInquiry=()=>{inquiryModal.classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('company').focus(),50)};
+const closeInquiry=()=>{inquiryModal.classList.remove('open');document.body.style.overflow=''};
+document.querySelectorAll('.js-open-inquiry').forEach(b=>b.addEventListener('click',openInquiry));
+document.getElementById('inquiryClose').addEventListener('click',closeInquiry);
+inquiryModal.addEventListener('click',e=>{if(e.target===inquiryModal)closeInquiry()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeInquiry();exModal.classList.remove('open');setMenu(false)}});
+document.querySelectorAll('.select-plan').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById('interest').value=a.dataset.plan;openInquiry()}));
+
+const buildText=()=>{
+  const co=company.value.trim(),ph=phone.value.trim(),msg=message.value.trim(),ok=privacy.checked;
+  if(!ph||!msg||!ok){formResult.textContent='연락처, 문의 내용, 개인정보 동의는 필수입니다.';return null}
+  return `[홍스랩 제작 상담]\n업체명/이름: ${co||'미입력'}\n연락처: ${ph}\n관심 상품: ${interest.value}\n문의 내용:\n${msg}`;
+};
+document.getElementById('kakaoSend').addEventListener('click',async()=>{const text=buildText();if(!text)return;try{await navigator.clipboard.writeText(text)}catch{}formResult.textContent='내용이 복사되었습니다. 열리는 카카오톡 채팅창에 붙여넣어 전송해 주세요.';window.open(KAKAO,'_blank','noopener')});
+document.getElementById('copyOnly').addEventListener('click',async()=>{const text=buildText();if(!text)return;try{await navigator.clipboard.writeText(text);formResult.textContent='내용이 복사되었습니다. 카카오톡·문자·이메일 어디에나 붙여넣어 보내주세요.'}catch{formResult.textContent='복사에 실패했습니다. 내용을 직접 선택해 복사해 주세요.'}});
 </script>
 </body>
 </html>
