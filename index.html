@@ -629,7 +629,7 @@ document.getElementById('kakaoSend').addEventListener('click',async()=>{
   if(ok){
     copyBox.hidden=true;
     formResult.textContent='내용이 복사되었습니다. 열리는 카카오톡 채팅창에 붙여넣어 전송해 주세요.';
-    const w=window.open(KAKAO,'_blank','noopener');
+    const w=window.open(KAKAO,'_blank');if(w){try{w.opener=null}catch(e){}}
     if(!w){formResult.textContent='내용이 복사되었습니다. 아래 버튼을 눌러 카카오톡을 열고 붙여넣어 주세요.';copyText.value=text;copyBox.hidden=false}
   }else{
     showCopyBox(text);
