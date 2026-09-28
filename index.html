@@ -260,6 +260,9 @@
     .tm-actions>*:hover{transform:translateY(-2px)}
     .tm-actions .ghost{border:1px solid var(--border2);color:#fff}
     .tm-result{margin-top:14px;font-size:14px;color:var(--gold);min-height:1.4em}
+    .tm-copybox{margin-top:12px}
+    .tm-copybox textarea{width:100%;min-height:150px;background:#0d0d0d;border:1px solid var(--border2);color:#fff;border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.6;resize:vertical;font-family:inherit}
+    .tm-copybox .btn_kakao{display:inline-flex;align-items:center;justify-content:center;width:100%;margin-top:10px;line-height:48px;border-radius:40px;font-weight:700;font-size:15px}
 
     /* ===== Responsive ===== */
     @media (max-width:1280px){
@@ -531,6 +534,7 @@
             <button type="button" class="ghost" id="copyOnly">내용만 복사</button>
           </div>
           <div class="tm-result" id="formResult" aria-live="polite"></div>
+          <div class="tm-copybox" id="copyBox" hidden><textarea id="copyText" readonly aria-label="복사할 상담 내용"></textarea><a class="btn_kakao" id="kakaoOpen" href="https://pf.kakao.com/_KxojrX" target="_blank" rel="noopener">복사했어요, 카카오톡 열기</a></div>
         </form>
       </div>
     </div>
@@ -551,7 +555,7 @@ const PORTFOLIO=[
  ['https://gunaminc.kr/','(주)구남종합인력 홈페이지','업종별 인력 소개 · 서비스 안내 · 전화 문의 연결']
 ];
 const shot=(url,w)=>`https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=${w}`;
-const KAKAO='http://pf.kakao.com/_KxojrX';
+const KAKAO='https://pf.kakao.com/_KxojrX';
 
 /* ===== 마퀴 (2줄, 무한 루프용 2회 복제) ===== */
 function marqueeHTML(list){const items=list.map(p=>`<li><img loading="lazy" src="${shot(p[0],780)}" alt="${p[1]} 미리보기"></li>`).join('');return items+items}
@@ -608,8 +612,36 @@ const buildText=()=>{
   if(!ph||!msg||!ok){formResult.textContent='연락처, 문의 내용, 개인정보 동의는 필수입니다.';return null}
   return `[홍스랩 제작 상담]\n업체명/이름: ${co||'미입력'}\n연락처: ${ph}\n관심 상품: ${interest.value}\n문의 내용:\n${msg}`;
 };
-document.getElementById('kakaoSend').addEventListener('click',async()=>{const text=buildText();if(!text)return;try{await navigator.clipboard.writeText(text)}catch{}formResult.textContent='내용이 복사되었습니다. 열리는 카카오톡 채팅창에 붙여넣어 전송해 주세요.';window.open(KAKAO,'_blank','noopener')});
-document.getElementById('copyOnly').addEventListener('click',async()=>{const text=buildText();if(!text)return;try{await navigator.clipboard.writeText(text);formResult.textContent='내용이 복사되었습니다. 카카오톡·문자·이메일 어디에나 붙여넣어 보내주세요.'}catch{formResult.textContent='복사에 실패했습니다. 내용을 직접 선택해 복사해 주세요.'}});
+const copyBox=document.getElementById('copyBox'),copyText=document.getElementById('copyText');
+const copyToClipboard=async text=>{
+  if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(text);return true}catch(e){}}
+  try{
+    const ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');
+    ta.style.cssText='position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none';
+    document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,text.length);
+    const ok=document.execCommand('copy');document.body.removeChild(ta);return ok;
+  }catch(e){return false}
+};
+const showCopyBox=text=>{copyText.value=text;copyBox.hidden=false;copyText.focus();copyText.select();copyText.setSelectionRange(0,text.length)};
+document.getElementById('kakaoSend').addEventListener('click',async()=>{
+  const text=buildText();if(!text)return;
+  const ok=await copyToClipboard(text);
+  if(ok){
+    copyBox.hidden=true;
+    formResult.textContent='내용이 복사되었습니다. 열리는 카카오톡 채팅창에 붙여넣어 전송해 주세요.';
+    const w=window.open(KAKAO,'_blank','noopener');
+    if(!w){formResult.textContent='내용이 복사되었습니다. 아래 버튼을 눌러 카카오톡을 열고 붙여넣어 주세요.';copyText.value=text;copyBox.hidden=false}
+  }else{
+    showCopyBox(text);
+    formResult.textContent='이 브라우저에서는 자동 복사가 되지 않습니다. 아래 내용을 길게 눌러 복사한 뒤 카카오톡을 열어 주세요.';
+  }
+});
+document.getElementById('copyOnly').addEventListener('click',async()=>{
+  const text=buildText();if(!text)return;
+  const ok=await copyToClipboard(text);
+  if(ok){copyBox.hidden=true;formResult.textContent='내용이 복사되었습니다. 카카오톡·문자·이메일 어디에나 붙여넣어 보내주세요.'}
+  else{showCopyBox(text);formResult.textContent='자동 복사가 되지 않아 아래에 내용을 표시했습니다. 길게 눌러 복사해 주세요.'}
+});
 </script>
 </body>
 </html>
